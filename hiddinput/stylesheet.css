@@ -1,3 +1,13 @@
-.hello-world {
-	font-size: 400%;
+.hiddinput {
+	border: 1px solid rgba(0,0,0,0);
+}
+
+.hiddinput:hover {
+	border: 1px solid rgba(0,0,0,1);
+
+
+}
+
+.hiddinput:active {
+	border: 1px solid rgba(0,0,0,1);
 }

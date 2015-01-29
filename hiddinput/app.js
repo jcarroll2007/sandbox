@@ -1,7 +1,26 @@
 angular.module('myApp', [])
 
-	.directive('helloWorld', function() {
+	.controller('mainController', function($scope) {
+		$scope.myVal = "Hello World!";
+	})
+
+	.directive('hiddinput', function() {
 		return {
-			template: '<p class="hello-world">Hello World!</p>'
+			restrict: 'A',
+			link: function(scope, element, attrs) {
+				element.css({ cursor: 'pointer'});
+
+				element.bind('focus', onFocus);
+
+				element.bind('focusout', onLoseFocus);
+
+				function onFocus() {
+
+				}
+
+				function onLoseFocus() {
+
+				}
+			}
 		};
 	});
