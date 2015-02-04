@@ -1,13 +1,24 @@
-.hiddinput {
-	border: 1px solid rgba(0,0,0,0);
+.hiddinput .anchor-border {
+	cursor: text;
+	padding: .3em .4em;
+	display: inline-block;
+
+	border: 2px solid rgba(0,0,0,0);
+	border-radius: 3px;
+
+	-webkit-transition: border .5s; /* For Safari 3.1 to 6.0 */
+    transition: border .5s;
+}
+.hiddinput .anchor-border:hover {
+	border: 2px solid rgba(60,60,60,1);
+	-webkit-transition: border .5s; /* For Safari 3.1 to 6.0 */
+    transition: border .5s;
 }
 
-.hiddinput:hover {
-	border: 1px solid rgba(0,0,0,1);
-
+.hiddinput .edit-box {
 
 }
 
-.hiddinput:active {
-	border: 1px solid rgba(0,0,0,1);
+.hiddinput .edit-box textarea {
+	resize: none;
 }

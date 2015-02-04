@@ -1,26 +1,35 @@
 angular.module('myApp', [])
 
 	.controller('mainController', function($scope) {
-		$scope.myVal = "Hello World!";
+		$scope.myVal = "Hello Worldfdssssssssssssss! \nfdasfdsafdsafdsfdsafdsafdsafsdfdsafdsaf";
 	})
 
 	.directive('hiddinput', function() {
 		return {
-			restrict: 'A',
+			restrict: 'E',
+			scope: {
+				model: '=ngModel'
+			},
+			templateUrl: 'hiddinput.html',
 			link: function(scope, element, attrs) {
-				element.css({ cursor: 'pointer'});
+				var oldValue = '';
+				scope.edit = function() {
+					scope.newValue = oldValue = scope.model;
+					scope.editing = true;
+				};
 
-				element.bind('focus', onFocus);
+				scope.cancelEdit = function() {
+					scope.model = oldValue;
+					scope.newValue = '';
+					scope.editing = false;
+				};
 
-				element.bind('focusout', onLoseFocus);
+				scope.confirmEdit = function() {
+					scope.model = scope.newValue;
+					scope.newValue = '';
+					scope.editing = false;
+				};
 
-				function onFocus() {
-
-				}
-
-				function onLoseFocus() {
-
-				}
 			}
 		};
 	});
