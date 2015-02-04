@@ -1,0 +1,15 @@
+<div class="hiddinput" >
+	<div class="anchor-border" ng-click="edit()" ng-show="!editing">
+		<span class="anchor" >{{model}}</span>
+	</div>
+	<form no-validate id="edit-form">
+		<div class="edit-box" ng-show="editing">
+			<textarea ng-model="newValue" form="edit-form"></textarea>
+			<input type="submit" ng-click="confirmEdit()" value="Ok"/>
+			<input type="button" ng-click="cancelEdit()" value="Cancel"/>
+		</div>
+	</form>
+
+	<p>model: {{model}}</p>
+	<p>newVal: {{newValue}}</p>
+</div>
