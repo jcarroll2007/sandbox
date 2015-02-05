@@ -26,7 +26,7 @@
 }
 
 .hiddinput .edit-box {
-	background-color: #333;
+	background-color: #B1B1B1;
 	border-radius: 3px;
 	z-index: 1000;
 }
@@ -51,10 +51,20 @@
 	cursor: pointer;
 }
 
-.hiddinput input[type~="submit"]:hover, input[type~="button"]:hover{
-	background-color:  #ddd;
+.hiddinput input[type~="submit"]:hover {
+	background-color: #2973E3;
+	color: #FCFCFC;
 	border: none;
 	border-radius: 3px;
 	margin: 0 .3em;
 	cursor: pointer;
+}
+input[type~="button"]:hover {
+	background-color: #E83131;
+	color: #FCFCFC;
+	border: none;
+	border-radius: 3px;
+	margin: 0 .3em;
+	cursor: pointer;
+
 }

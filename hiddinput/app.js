@@ -56,6 +56,9 @@ angular.module('myApp', [])
 				scope.enableCancel = function() {
 					scope.canCancel = true;
 				};
+				scope.$watch('canCancel', function() {
+					console.log(scope.canCancel);
+				});
 			}
 		};
 	});
