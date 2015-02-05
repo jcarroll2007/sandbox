@@ -1,15 +1,17 @@
 <div class="hiddinput" >
 	<div class="anchor-border" ng-click="edit()" ng-show="!editing">
-		<span class="anchor" >{{model}}</span>
+		<div class="anchor">{{model}}</div>
 	</div>
 	<form no-validate id="edit-form">
-		<div class="edit-box" ng-show="editing">
-			<textarea ng-model="newValue" form="edit-form"></textarea>
-			<input type="submit" ng-click="confirmEdit()" value="Ok"/>
-			<input type="button" ng-click="cancelEdit()" value="Cancel"/>
+		<div ng-show="editing" class="edit-box" ng-mouseenter="disableCancel()" ng-mouseleave="enableCancel()">
+			<span>
+				<input ng-model="newValue" ng-style="inputStyle" type="text" class="the-input" ng-blur="cancelEdit()"></input>
+			</span>
+			<span class="controls">
+				<input type="submit" ng-click="confirmEdit()" value="Ok"/>
+				<input type="button" ng-click="cancelEdit()" value="Cancel"/>
+			</span>
 		</div>
 	</form>
-
-	<p>model: {{model}}</p>
-	<p>newVal: {{newValue}}</p>
+	{{canCancel}}
 </div>

@@ -1,24 +1,60 @@
+.hiddinput {
+	display: inline-block;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+.hiddinput label {
+	cursor: text;
+}
+
 .hiddinput .anchor-border {
 	cursor: text;
-	padding: .3em .4em;
 	display: inline-block;
+	padding: .3em .4em;
 
-	border: 2px solid rgba(0,0,0,0);
+	border: 1px solid rgba(0,0,0,0);
 	border-radius: 3px;
 
 	-webkit-transition: border .5s; /* For Safari 3.1 to 6.0 */
     transition: border .5s;
 }
 .hiddinput .anchor-border:hover {
-	border: 2px solid rgba(60,60,60,1);
+	border: 1px solid rgba(150,150,150,1);
 	-webkit-transition: border .5s; /* For Safari 3.1 to 6.0 */
     transition: border .5s;
 }
 
 .hiddinput .edit-box {
-
+	background-color: #333;
+	border-radius: 3px;
+	z-index: 1000;
 }
 
-.hiddinput .edit-box textarea {
-	resize: none;
+.hiddinput input {
+	vertical-align: middle;
+}
+
+.hiddinput .the-input{
+	border: 1px solid rgba(150,150,150,1);
+	border-radius: 3px;
+	padding: .3em .4em;
+	font-size: 12px;
+	outline: none;
+}
+
+.hiddinput input[type~="submit"], input[type~="button"]{
+	background-color:  #FFFFFF;
+	border: none;
+	border-radius: 3px;
+	margin: 0 .3em;
+	cursor: pointer;
+}
+
+.hiddinput input[type~="submit"]:hover, input[type~="button"]:hover{
+	background-color:  #ddd;
+	border: none;
+	border-radius: 3px;
+	margin: 0 .3em;
+	cursor: pointer;
 }
