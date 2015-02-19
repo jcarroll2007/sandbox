@@ -87,7 +87,13 @@ angular.module('myApp', [])
 					return scope.editing === true ? "editing" : "editable";
 				};
 
-				window.editing = scope.editing;
+				scope.onKeyup = function($event) {
+					if ($event.keyCode === 27) {
+						scope.editForm.value.$rollbackViewValue();
+						scope.stopEdit();
+					}
+
+				};
 			}
 		};
 	});

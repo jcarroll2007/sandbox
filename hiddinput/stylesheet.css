@@ -85,8 +85,8 @@ input[type~="button"]:hover {
 
 .editable:hover {
 	border-color: #888888;
-	-webkit-transition: border .5s; /* For Safari 3.1 to 6.0 */
-    transition: border .5s;
+	-webkit-transition: border .3s; /* For Safari 3.1 to 6.0 */
+    transition: border .3s;
 }
 
 .edit-icon {
