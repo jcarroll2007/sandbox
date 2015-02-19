@@ -61,4 +61,33 @@ angular.module('myApp', [])
 				});
 			}
 		};
+	})
+
+	.directive('editable', function($timeout) {
+		return {
+			scope: {
+				model: '=editable',
+			},
+			transclude: true,
+			templateUrl: 'editable.html',
+			link: function(scope, element, attrs) {
+
+				scope.edit = function() {
+					scope.editing = true;
+					$timeout(function() {
+						element[0].querySelector('input').focus();
+					});
+				};
+
+				scope.stopEdit = function() {
+					scope.editing = false;
+				};
+
+				scope.getState = function() {
+					return scope.editing === true ? "editing" : "editable";
+				};
+
+				window.editing = scope.editing;
+			}
+		};
 	});

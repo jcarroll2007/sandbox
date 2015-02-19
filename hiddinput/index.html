@@ -6,6 +6,8 @@
 
 	<!-- Dependencies -->
 	<script src="../bower_components/angular/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css.map">
 
 	<!-- Source -->
 		<!-- JS -->
@@ -19,8 +21,11 @@
 
 <body ng-app="myApp">
 
-	<div ng-controller="mainController">
-		<hiddinput ng-model="myVal" default="0"></hiddinput>
+	<div ng-controller="mainController" >
+		<!-- <hiddinput ng-model="myVal" default="0"></hiddinput> -->
+		<h1 editable="myVal">{{myVal}}</h1>
+		<label editable="myVal">{{myVal}}</label>
+		<p editable="myVal">{{myVal}}</p>
 	</div>
 
 </body>
