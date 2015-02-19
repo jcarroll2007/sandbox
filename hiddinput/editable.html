@@ -1,0 +1,8 @@
+<div ng-class="getState()" style="cursor: text">
+	<ng-transclude ng-hide="editing" ng-click="edit()"></ng-transclude>
+	<div ng-show="editing">
+		<form name="editForm" novalidate ng-submit="stopEdit()">
+			<input ng-model="model" ng-blur="stopEdit()" ng-model-options="{ updateOn: 'blur' }" ng-keyup="onKeyup($event)" name="value">
+		</form>
+	</div>
+</div>
